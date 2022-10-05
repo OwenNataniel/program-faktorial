@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Menggunakan JavaScript</title>
+    <style type="text/css">
+        .container {
+            width: 30%;
+            margin: 200px auto;
+            text-align: center;
+            border: 2px solid red;
+            padding: 20px 10px 20px 10px;
+            border-radius: 20px;
+        }
+
+        #demo {
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Faktorial Menggunakan JavaScript</h1>
+        <form>
+            <input type="" name="" id="input">
+            <button id="button">Cek</button>
+            <div id="demo"></div>
+        </form>
+        <script type="text/javascript">
+            var input = document.getElementById("input");
+            var button = document.getElementById("button");
+            var demo = document.getElementById("demo");
+
+            button.addEventListener("click", function (e) {
+                e.preventDefault()
+                var valInp = input.value;
+                var hasil = 1;
+
+                for (var i = valInp; i > 0; i--) {
+                    hasil *= i;
+                }
+                demo.innerHTML = `Hasil Vaktorial Dari <strong> ${valInp} </strong> adalah <strong> ${hasil} </strong>`;
+            });
+        </script>
+    </div>
+</body>
+
+</html>
